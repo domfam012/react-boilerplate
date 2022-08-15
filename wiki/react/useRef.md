@@ -1,4 +1,4 @@
-#useRef 로 특정 DOM 선택하기
+# useRef 로 특정 DOM 선택하기
 
 JavaScript 를 사용 할 때에는, 우리가 특정 DOM 을 선택해야 하는 상황에 `getElementById`, `querySelector` 같은 DOM Selector 함수를 사용해서 DOM 을 선택합니다.
 
