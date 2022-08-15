@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import {exampleApi} from "../api/adaptor.api"
 import {useTranslation} from "react-i18next";
@@ -7,20 +7,30 @@ import {useSelector} from "react-redux";
 import {selectList} from "../app/slice"
 import Table from 'react-bootstrap/Table';
 import Carousel from 'react-bootstrap/Carousel';
+import Markdown from "../components/Markdown/MarkdownRenderer";
+import Test from "../wiki/before/ssr_csr.md"
 
+let eac = ""
 function Home() {
-    const {t} = useTranslation();
 
-    const clickHandler = (lang) =>{
-        i18next.changeLanguage(lang);
-    }
+    const [post, setPost] = useState("")
 
     const list = useSelector(selectList);
 
     useEffect(()=>{
         exampleApi({}, (err, res) => {
-            console.log(res)
+           // console.log(res)
         })
+
+        fetch('https://raw.githubusercontent.com/erasabi/trekthroughs/master/pen_testing/RickdiculouslyEasy.md')
+            .then(response => response.text())
+            .then(result => {
+                console.log(result)
+                setPost(result)
+            });
+
+
+
     },[])
 
     return (
@@ -32,12 +42,9 @@ function Home() {
                 <li>
                     <Link to="/posts/1">Post</Link>
                 </li>
+
             </ul>
-            <div>
-                <button onClick={()=>clickHandler("ko")}>KO</button>
-                <button onClick={()=>clickHandler("en")}>EN</button>
-                <p>{t("hello")}</p>
-            </div>
+
 
             <Table striped bordered hover size="sm">
                 <thead>
@@ -52,7 +59,7 @@ function Home() {
                 <tbody>
                 {
                     list.map((item, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{index}</td>
                             <td>{item.name}</td>
                             <td>{item.year}</td>
@@ -103,6 +110,8 @@ function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <Markdown linkTarget="_blank">{post}</Markdown>
+
         </div>
     );
 }

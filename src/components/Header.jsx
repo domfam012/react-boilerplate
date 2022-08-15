@@ -1,11 +1,26 @@
 import React from 'react';
+import {Breadcrumb, Layout} from "antd";
 
-function Header(props) {
+const { Header } = Layout;
+
+function HeaderC(props) {
     return (
-        <>
-            <h1>헤더입니다.</h1>
-        </>
+        <Header
+            className="site-layout-background"
+            style={{
+                padding: 0,
+            }}
+        >
+            <Breadcrumb
+                style={{
+                    margin: '20px 16px',
+                }}
+            >
+                <Breadcrumb.Item>User</Breadcrumb.Item>
+                <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            </Breadcrumb>
+        </Header>
     );
 }
 
-export default Header;
+export default HeaderC;

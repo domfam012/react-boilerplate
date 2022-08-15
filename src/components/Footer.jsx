@@ -1,11 +1,18 @@
 import React from 'react';
+import { Layout} from 'antd';
 
-function Footer(props) {
+const { Footer } = Layout;
+
+function FooterC(props) {
     return (
-        <>
-            <h1>푸터입니다.</h1>
-        </>
+        <Footer
+            style={{
+                textAlign: 'center',
+            }}
+        >
+            Ant Design ©2018 Created by Ant UED
+        </Footer>
     );
 }
 
-export default Footer;
+export default FooterC;
