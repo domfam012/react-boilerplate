@@ -20,7 +20,7 @@ export default class Api {
 
     request(method, config) {
         return axios({
-            timeout: 5000, // 요청 timeout이 발동 \되기 전 milliseconds의 시간을 요청. timeout 보다 요청이 길어진다면, 요청은 취소됨
+            timeout: 5000, // 요청 timeout이 발동되기 전 milliseconds의 시간을 요청. timeout 보다 요청이 길어진다면, 요청은 취소됨
             url: method,
             headers: { "Cache-Control": "no-cache" }, // 자체 캐시 처리되어 실제 서버를 호출하지 않는 현상 해결
             ...config // method + params or data
@@ -66,7 +66,7 @@ export default class Api {
 #### 4. API 연동 모듈 사용 방법 2
 
 API 연동 모듈 사용 방법 1에서 생성한 함수를 호출하는 함수를 생성합니다.   
-callback 함수는 해당 함수를 호출한 화면단으로 데이터를 전송하는 경우 작성하며 필요하지 않은 경우 생략 가능합니다.   
+callback 함수는 해당 함수를 호출한 화면단으로 데이터를 전송하는 경우 작성, 필요하지 않은 경우 생략 가능합니다.   
 필요하지 않은 경우를 예로 들면 adaptor.api.js에서 응답 데이터를 store에 저장 후 해당 함수를 호출한 화면에서 store에 저장된 데이터를 사용하는 경우 등이 있습니다.
 
 📂 src/api/adaptor.api.js 에서 해당 부분만 발췌
