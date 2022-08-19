@@ -10,13 +10,15 @@ function I18next() {
     const clickHandler = (lang) =>{
         i18next.changeLanguage(lang);
     }
+
     const [post, setPost] = useState("")
 
     useEffect(()=>{
         fetch(source)
             .then(response => response.text())
             .then(result => setPost(result));
-    },[])
+    },[]);
+
     return (
         <>
             <Markdown linkTarget="_blank">{post}</Markdown>

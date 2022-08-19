@@ -10,7 +10,7 @@ function Bootstrap() {
         fetch(source)
             .then(response => response.text())
             .then(result => setPost(result));
-    },[])
+    },[]);
 
     return (
         <>
