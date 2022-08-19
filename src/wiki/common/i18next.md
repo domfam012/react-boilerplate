@@ -10,9 +10,9 @@ npm install react-i18next i18next --save
 
 #### 2. 언어 설정 파일 생성
 
-translation.XX.json 파일은 다국어 처리를 하기위해, 각 나라별 언어를 설정한 파일 이며 전환하고자 하는 언어는 동일한 key값을 가져야 합니다.
+translation.XX.json 파일은 다국어 처리를 하기 위해, 각 나라별 언어를 설정한 파일이며 전환하고자 하는 언어는 동일한 key 값을 가져야 합니다.
 
- src/lang/translation.en.json
+📂 src/lang/translation.en.json
 
 ```json
 {

@@ -10,7 +10,7 @@ import Home from "./pages/Home"
 import Bootstrap from "./pages/Bootstrap";
 import I18next from "./pages/I18next";
 import RouterV6 from "./pages/RouterV6"
-import Api from "./pages/API"
+import Api from "./pages/Api"
 import Redux from "./pages/Redux";
 
 const { Content} = Layout;

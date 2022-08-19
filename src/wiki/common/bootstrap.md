@@ -10,7 +10,7 @@ npm install react-bootstrap bootstrap
 
 #### 2. Bootstrap CSS 적용
 
-최상단의 루트파일인 src/index.js 상단에 Bootstrap CSS 스타일시트를 import 합니다.
+최상단의 루트 파일인 src/index.js 상단에 Bootstrap CSS 스타일 시트를 import 합니다.
 
 📂 src/index.js
 
@@ -24,7 +24,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 [React-Bootstrap Components](https://react-bootstrap.github.io/components/alerts/)
 
 위 페이지 진입 후 프로젝트에서 사용하고자 하는 컴포넌트를 import 해서 적용하면 사용 가능합니다.   
-예시로 Carousel를 추가해보겠습니다.   
+예시로 Carousel를 추가해 보겠습니다.   
 
 📂 src/pages/Bootstrap.jsx 에서 해당 부분만 발췌
 

@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from "react";
 import source from "../wiki/common/api.md";
 import Markdown from "../components/Markdown/MarkdownRenderer";
-import {exampleApi} from "../api/adaptor.api";
 import Table from 'react-bootstrap/Table';
+import {exampleApi} from "../api/adaptor.api";
 
 function Api() {
     const [post, setPost] = useState("")
     const [apiData, setApiData] = useState([])
 
     useEffect(()=>{
-        exampleApi({}, (err, res) => {
-           setApiData(res);
-        })
+        exampleApi({}, (err, res) => setApiData(res))
     },[]);
 
     useEffect(()=>{
