@@ -8,7 +8,7 @@ const { Sider } = Layout;
 const menuItem = [
     {name : "Home", path : "/"},
     {name : "I18next", path : "/i18next"},
-    {name : "Router", path : "/router/1"},
+    {name : "RouterV6", path : "/router/1"},
     {name : "API", path : "/api"},
     {name : "Redux", path : "/redux"},
     {name : "Bootstrap", path : "/bootstrap"},
