@@ -1,11 +1,11 @@
 # SSR vs CSR
 
-### 📖 SSR / CSR 간단 설명
+#### SSR / CSR 간단 설명
 > SSR :   
 > CSR : 
+***
 
-
-### 🔖 SSR vs CSR 차이점
+#### SSR vs CSR 차이점
 
 |     | SSR                                              | CSR                                                     |
 |-----|--------------------------------------------------|---------------------------------------------------------|
@@ -13,12 +13,13 @@
 | 서버 부담 | 서버와 잦은 응답 (view 변경 시 마다)을 하기 때문에 **서버에 부담이 된다.** | data 요청이 있을 떄만 서버에 요청 하기 때문에 **서버에 부담이 적다.**            |
 | SEO | HTML에 대한 정보가 처음에 포함되어 있어 **데이터를 수집할 수 있다.**      | 맨 처음 HTML 파일이 비어 있어, 크롤러가 **데이터를 수집할 수 없다.** (단, 구글 제외) |
 
-### 📌 참고하면 좋은 유튜브 및 블로그
+***
 
-[![Video Label](http://img.youtube.com/vi/5W72UHb-9iI/0.jpg)](https://youtu.be/5W72UHb-9iI)
+#### 참고하면 좋은 유튜브 및 블로그
 
 [SSR과 CSR의 차이](https://proglish.tistory.com/216)
 
 [SSR vs CSR 비교 설명, Next.js가 탄생하게 된 이유](https://www.sarah-note.com/%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/posting2/)
 
-***
+[![Video Label](http://img.youtube.com/vi/5W72UHb-9iI/0.jpg)](https://youtu.be/5W72UHb-9iI)
+
