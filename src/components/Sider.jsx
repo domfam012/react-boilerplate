@@ -11,7 +11,7 @@ const menuItem = [
     {name : "Router", path : "/router/1"},
     {name : "API", path : "/api"},
     {name : "Redux", path : "/redux"},
-    {name : "BootStrap", path : "/bootStrap"},
+    {name : "Bootstrap", path : "/bootstrap"},
 ]
 
 function SiderC(props) {

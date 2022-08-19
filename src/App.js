@@ -7,7 +7,7 @@ import './index.css';
 import { Layout} from 'antd';
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home"
-import BootStrap from "./pages/BootStrap";
+import Bootstrap from "./pages/Bootstrap";
 import I18next from "./pages/I18next";
 import RouterV6 from "./pages/RouterV6"
 import Api from "./pages/API"
@@ -27,7 +27,7 @@ const App = () => {
                             <Routes>
                                 <Route path="/" element={<Home/>} />
                                 <Route path="/i18next" element={<I18next/>} />
-                                <Route path="/bootStrap" element={<BootStrap/>}/>
+                                <Route path="/bootstrap" element={<Bootstrap/>}/>
                                 <Route path="/router/:id" element={<RouterV6/>}/>
                                 <Route path="/api" element={<Api/>}/>
                                 <Route path="/redux" element={<Redux/>}/>

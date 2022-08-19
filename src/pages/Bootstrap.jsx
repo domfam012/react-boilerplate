@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import source from "../wiki/common/bootStrap.md";
+import source from "../wiki/common/bootstrap.md";
 import Markdown from "../components/Markdown/MarkdownRenderer";
 import Carousel from "react-bootstrap/Carousel";
 
-function BootStrap() {
+function Bootstrap() {
     const [post, setPost] = useState("")
 
     useEffect(()=>{
@@ -58,4 +58,4 @@ function BootStrap() {
     );
 }
 
-export default BootStrap;
+export default Bootstrap;
