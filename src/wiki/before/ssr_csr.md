@@ -1,8 +1,11 @@
 # SSR vs CSR
 
 #### SSR / CSR 간단 설명
-> SSR :   
-> CSR : 
+
+SSR : 추후 작성 예정
+
+CSR : 추후 작성 예정
+
 ***
 
 #### SSR vs CSR 차이점
