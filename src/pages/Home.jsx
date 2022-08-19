@@ -1,6 +1,18 @@
+import React, {useEffect, useState} from "react";
+import source from "../wiki/common/home.md";
+import Markdown from "../components/Markdown/MarkdownRenderer";
+
 function Home() {
+    const [post, setPost] = useState("")
+
+    useEffect(()=>{
+        fetch(source)
+            .then(response => response.text())
+            .then(result => setPost(result));
+    },[])
+
     return (
-        <div> 홈 .... </div>
+        <Markdown linkTarget="_blank">{post}</Markdown>
     );
 }
 

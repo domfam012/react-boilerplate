@@ -20,7 +20,7 @@ function Api() {
 
     return (
         <>
-            <Markdown linkTarget="_blank">{post}</Markdown>
+            <Markdown>{post}</Markdown>
             <Table striped bordered hover>
                 <thead>
                 <tr>
@@ -45,7 +45,7 @@ function Api() {
                 }
                 </tbody>
             </Table>
-        </>
+       </>
     );
 }
 

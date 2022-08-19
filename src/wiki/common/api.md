@@ -1,7 +1,7 @@
 # API
 ***
 
-#### 1. axios 설치
+#### 1. Axios 설치
 ```
 npm i axios
 ```
@@ -149,4 +149,3 @@ export default Api;
 > Strict mode는 개발 단계에서만 적용되기 때문에 실제 배포 시에는 원래대로 한 번만 렌더링이 발생합니다.   
 >    
 > 따라서 만약 개발 단계에서 초기 렌더링이 중복으로 발생하면 안 되는 상황일 경우 임시로 src/index.js에서 <React.StrictMode>를 잠시 주석 처리해 놓고 진행하면 되겠습니다.
-
