@@ -7,7 +7,10 @@ function HeaderC(props) {
     return (
         <Header
             className="site-layout-background"
-            style={{padding: 0}}
+            style={{
+                padding: 0,
+                backgroundColor : "#001529"
+            }}
         />
 
     );

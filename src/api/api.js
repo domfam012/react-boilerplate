@@ -1,8 +1,6 @@
 import axios from "axios";
 
 export default class Api {
-    constructor() {
-    }
 
     request(method, config) {
         return axios({

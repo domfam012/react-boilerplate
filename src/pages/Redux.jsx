@@ -18,7 +18,7 @@ function Redux() {
     return (
         <>
             <Markdown linkTarget="_blank">{post}</Markdown>
-            <Table striped bordered hover size="sm">
+            <Table striped hover size="sm" style={{width : "600px", fontSize : "11px", textAlign: "center"}}>
                 <thead>
                 <tr>
                     <th>#</th>

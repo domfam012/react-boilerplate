@@ -6,14 +6,10 @@ import 'antd/dist/antd.css';
 import './index.css';
 import { Layout} from 'antd';
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home"
-import Bootstrap from "./pages/Bootstrap";
-import I18next from "./pages/I18next";
-import RouterV6 from "./pages/RouterV6"
-import Api from "./pages/Api"
-import Redux from "./pages/Redux";
+import RouteList from "./app/router";
 
-const { Content} = Layout;
+
+const {Content} = Layout;
 
 const App = () => {
     return (
@@ -21,16 +17,15 @@ const App = () => {
             <Layout style={{minHeight: '100vh'}}>
                 <SiderC/>
                 <Layout className="site-layout">
-                    {/*<HeaderC/>*/}
+                    <HeaderC/>
                     <Content style={{margin: '16px 16px',}}>
                         <div className="site-layout-background" style={{padding: 24, minHeight: 360,}}>
                             <Routes>
-                                <Route path="/" element={<Home/>} />
-                                <Route path="/i18next" element={<I18next/>} />
-                                <Route path="/bootstrap" element={<Bootstrap/>}/>
-                                <Route path="/router/:id" element={<RouterV6/>}/>
-                                <Route path="/api" element={<Api/>}/>
-                                <Route path="/redux" element={<Redux/>}/>
+                                {
+                                    RouteList.map((item, index) => (
+                                        <Route key={index} {...item} />
+                                    ))
+                                }
                             </Routes>
                         </div>
                     </Content>

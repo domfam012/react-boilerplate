@@ -65,7 +65,8 @@ import {useTranslation} from "react-i18next";
 import i18next from "../lang/i18n";
 
 function I18next() {
-    const {t} = useTranslation(); // useTranslation 내부의 hook을 사용 하여 번역 기능 제공
+    // useTranslation 내부의 hook을 사용 하여 번역 기능 제공, i18n 인스턴트 제공
+    const {t, i18n} = useTranslation(); 
 
     const clickHandler = (lang) =>{
         i18next.changeLanguage(lang); // 언어 변환 함수
@@ -73,10 +74,19 @@ function I18next() {
 
     return (
         <>
+            <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    current language : {`${i18n.language.toUpperCase()} `}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <Dropdown.Item onClick={()=>clickHandler("ko")}>KO</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>clickHandler("en")}>EN</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+            <br/>
             <div>
-                <button onClick={()=>clickHandler("ko")}>KO</button>
-                <button onClick={()=>clickHandler("en")}>EN</button>
-                <p>{t("hello")}</p> {/*언어 설정 파일에 지정된 언어 리소스 key를 입력하면 해당 언어값 출력*/}
+                {/*언어 설정 파일에 지정된 언어 리소스 key를 입력하면 해당 언어값 출력*/}
+                <p>{t("hello")}</p>
             </div>
         </>
     );

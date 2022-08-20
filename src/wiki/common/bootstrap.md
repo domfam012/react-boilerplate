@@ -21,7 +21,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 #### 3. react-bootstrap 사용하기
 
-[React-Bootstrap Components](https://react-bootstrap.github.io/components/alerts/)
+[React-Bootstrap Components 바로가기](https://react-bootstrap.github.io/components/alerts/)
 
 위 페이지 진입 후 프로젝트에서 사용하고자 하는 컴포넌트를 import 해서 적용하면 사용 가능합니다.   
 예시로 Carousel를 추가해 보겠습니다.   

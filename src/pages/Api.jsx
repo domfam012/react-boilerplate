@@ -21,7 +21,7 @@ function Api() {
     return (
         <>
             <Markdown>{post}</Markdown>
-            <Table striped bordered hover>
+            <Table striped hover size="sm" style={{width : "600px", fontSize : "11px", textAlign: "center"}}>
                 <thead>
                 <tr>
                     <th>ID</th>
