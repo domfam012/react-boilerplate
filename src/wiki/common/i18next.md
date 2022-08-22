@@ -4,7 +4,7 @@
 #### 1. react-i18next 설치
 
 ```
-npm install react-i18next i18next --save
+npm i react-i18next i18next --save
 ```
 ***
 

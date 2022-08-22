@@ -4,7 +4,7 @@
 #### 1. react-bootstrap 설치
 
 ```
-npm install react-bootstrap bootstrap
+npm i react-bootstrap bootstrap
 ```
 ***
 
