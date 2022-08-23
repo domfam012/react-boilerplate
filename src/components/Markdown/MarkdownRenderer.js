@@ -25,7 +25,6 @@ const BlockQuoteStyle = styled.blockquote`
   background-color: #fffffa;
   padding: 1rem;
   font-size: 10px;
-  text-indent: 10px;
 `
 const BlockQuote = (children) => {
     return(

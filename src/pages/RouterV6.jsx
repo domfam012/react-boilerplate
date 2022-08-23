@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
-import { useNavigate, useParams } from "react-router";
+import {useNavigate, useParams } from "react-router";
 import source from "../wiki/common/router.md";
 import Markdown from "../components/Markdown/MarkdownRenderer";
 import {Link} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 function RouterV6 () {
     const { id } = useParams();
@@ -18,40 +19,23 @@ function RouterV6 () {
     return (
         <>
             <Markdown linkTarget="_blank">{post}</Markdown>
+            <div>현재 페이지 URL 파라미터 : router/{id}</div>
+            <br/>
+            <div> Link 사용 예제 </div>
             <ul>
                 <li>
-                    <Link to="/">home</Link>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/i18next">i18next</Link>
+                    <Link to="/i18next">I18next</Link>
                 </li>
             </ul>
+            <div style={{paddingBottom : "10px"}}>useNavigate 및 useParams 사용 예제 :</div>
             <div>
-                <button
-                    onClick={() => {
-                        navigate("/");
-                    }}
-                >
-                    Home
-                </button>
-                <button
-                    onClick={() => {
-                        navigate(-1);
-                    }}
-                >
-                    Go Back
-                </button>
-                <button
-                    onClick={() => {
-                        navigate(-2);
-                    }}
-                >
-                    Go Back Twice
-                </button>
-                <div>Current Page : router/{id}</div>
-                <button onClick={() => navigate(`/router/${parseInt(id) + 1}`)}>
-                    Next Router Page
-                </button>
+                <Button onClick={() => {navigate("/");}} variant="outline-primary">Home</Button>{' '}
+                <Button onClick={() => navigate(`/router/${parseInt(id) + 1}`)} variant="outline-success">Next Router Page</Button>{' '}
+                <Button onClick={() => {navigate(-1);}} variant="outline-warning">Go Back</Button>{' '}
+                <Button onClick={() => {navigate(-2);}} variant="outline-danger">Go Back Twice</Button>{' '}
             </div>
         </>
 

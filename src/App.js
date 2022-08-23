@@ -32,10 +32,7 @@ const App = () => {
                     <FooterC/>
                 </Layout>
             </Layout>
-
         </>
-
-
     );
 };
 
