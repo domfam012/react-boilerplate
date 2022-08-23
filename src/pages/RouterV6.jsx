@@ -32,10 +32,10 @@ function RouterV6 () {
             </ul>
             <div style={{paddingBottom : "10px"}}>useNavigate 및 useParams 사용 예제 :</div>
             <div>
-                <Button onClick={() => {navigate("/");}} variant="outline-primary">Home</Button>{' '}
-                <Button onClick={() => navigate(`/router/${parseInt(id) + 1}`)} variant="outline-success">Next Router Page</Button>{' '}
-                <Button onClick={() => {navigate(-1);}} variant="outline-warning">Go Back</Button>{' '}
-                <Button onClick={() => {navigate(-2);}} variant="outline-danger">Go Back Twice</Button>{' '}
+                <Button onClick={() => {navigate("/");}} variant="primary">Home</Button>{' '}
+                <Button onClick={() => navigate(`/router/${parseInt(id) + 1}`)} variant="success">Next Router Page</Button>{' '}
+                <Button onClick={() => {navigate(-1);}} variant="warning">Go Back</Button>{' '}
+                <Button onClick={() => {navigate(-2);}} variant="danger">Go Back Twice</Button>{' '}
             </div>
         </>
 
