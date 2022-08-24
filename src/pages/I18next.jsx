@@ -2,7 +2,7 @@ import {useTranslation} from "react-i18next";
 import i18next from "../lang/i18n";
 import {useEffect, useState} from "react";
 import source from "../wiki/common/i18next.md";
-import Markdown from "../components/Markdown/MarkdownRenderer";
+import Markdown from "../components/markdown/MarkdownRenderer";
 import Dropdown from 'react-bootstrap/Dropdown';
 
 function I18next() {

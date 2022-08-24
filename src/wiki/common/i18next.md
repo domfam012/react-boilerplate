@@ -36,8 +36,8 @@ translation.XX.json 파일은 다국어 처리를 하기 위해, 각 나라별 �
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import TranslationEn from "./translation.en.json";
-import TranslationKo from "./translation.ko.json";
+import TranslationEn from "./resources/translation.en.json";
+import TranslationKo from "./resources/translation.ko.json";
 
 // 각 json 파일들은 i18n의 resource로 관리 된다.
 const resource = {

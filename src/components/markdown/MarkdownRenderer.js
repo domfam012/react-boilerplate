@@ -23,7 +23,7 @@ const CodeBlock = (children) => {
 
 const BlockQuoteStyle = styled.blockquote`
   background-color: #fffffa;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 10px;
 `
 const BlockQuote = (children) => {

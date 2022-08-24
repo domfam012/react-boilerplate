@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import source from "../wiki/common/redux.md";
-import Markdown from "../components/Markdown/MarkdownRenderer";
+import Markdown from "../components/markdown/MarkdownRenderer";
 import {useSelector, useDispatch} from "react-redux";
 import {selectList, setList} from "../app/slice";
 import Table from "react-bootstrap/Table";
@@ -15,7 +15,7 @@ function Redux() {
         exampleApi({}, (err, res) => {
             dispatch(setList(res))
         })
-    },[]);
+    },[dispatch]);
 
     useEffect(()=>{
         fetch(source)

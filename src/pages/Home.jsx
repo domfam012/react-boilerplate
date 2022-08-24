@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import source from "../wiki/common/home.md";
-import Markdown from "../components/Markdown/MarkdownRenderer";
+import Markdown from "../components/markdown/MarkdownRenderer";
 
 function Home() {
     const [post, setPost] = useState("")

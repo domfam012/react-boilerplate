@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import source from "../wiki/common/api.md";
-import Markdown from "../components/Markdown/MarkdownRenderer";
+import Markdown from "../components/markdown/MarkdownRenderer";
 import Table from 'react-bootstrap/Table';
 import {exampleApi} from "../api/adaptor.api";
 

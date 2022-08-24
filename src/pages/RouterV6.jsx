@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useNavigate, useParams } from "react-router";
 import source from "../wiki/common/router.md";
-import Markdown from "../components/Markdown/MarkdownRenderer";
+import Markdown from "../components/markdown/MarkdownRenderer";
 import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 

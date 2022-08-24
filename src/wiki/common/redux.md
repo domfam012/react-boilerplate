@@ -125,7 +125,7 @@ function Redux() {
         exampleApi({}, (err, res) => {
             dispatch(setList(res)) // API 응답 데이터 dispatch를 이용하여 액션 실행 시키기
         })
-    },[]);
+    },[dispatch]);
 
     return (
         <>
