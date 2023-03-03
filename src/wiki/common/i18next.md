@@ -72,17 +72,35 @@ function I18next() {
         i18next.changeLanguage(lang); // 언어 변환 함수
     }
 
+    const items = [
+        {
+            label: 'KO',
+            key: 'ko',
+        },
+        {
+            label: 'EN',
+            key: 'en',
+        }
+    ];
+
+    const onClick = ({ key }) => {
+        clickHandler(key);
+    };
+    
     return (
         <>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown
+                menu={{
+                    items,
+                    onClick
+                }}
+                placement="top"
+            >
+                <a style={{borderRadius : 6, backgroundColor : '#1677ff', color : '#fff', width : 230, fontSize : 18, textAlign : 'center', padding : 10}} onClick={(e) => e.preventDefault()}>
                     current language : {`${i18n.language.toUpperCase()} `}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <Dropdown.Item onClick={()=>clickHandler("ko")}>KO</Dropdown.Item>
-                    <Dropdown.Item onClick={()=>clickHandler("en")}>EN</Dropdown.Item>
-                </Dropdown.Menu>
+                </a>
             </Dropdown>
+            <br/>
             <br/>
             <div>
                 {/*언어 설정 파일에 지정된 언어 리소스 key를 입력하면 해당 언어값 출력*/}

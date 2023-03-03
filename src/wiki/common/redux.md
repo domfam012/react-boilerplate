@@ -114,13 +114,12 @@ useDispatch Hook은 컴포넌트 내부에서 스토어의 내장함수 dispatch
 import {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {selectList, setList} from "../app/slice";
-import Table from "react-bootstrap/Table";
 import {exampleApi} from "../api/adaptor.api";
 
 function Redux() {
     const dispatch = useDispatch()
     const list = useSelector(selectList); // 리덕스에 저장된 API 응답 데이터 불러오기
-
+    
     useEffect(()=>{
         exampleApi({}, (err, res) => {
             dispatch(setList(res)) // API 응답 데이터 dispatch를 이용하여 액션 실행 시키기
@@ -129,30 +128,19 @@ function Redux() {
 
     return (
         <>
-            <Table striped hover size="sm" style={{width : "600px", fontSize : "11px", textAlign: "center"}}>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Year</th>
-                        <th>Color</th>
-                        <th>pantone_value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        list.map((item, index) => (
-                            <tr key={index}>
-                                <td>{index}</td>
-                                <td>{item.name}</td>
-                                <td>{item.year}</td>
-                                <td>{item.color}</td>
-                                <td>{item.pantone_value}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </Table>
+            <div style={{display : "flex"}}>
+                {
+                    list?.map((item, index) =>(
+                        <div style={{fontSize : 10, marginRight : 20}} key={index}>
+                            <p>ID : {item.id}</p>
+                            <p>Name : {item.name}</p>
+                            <p>Year : {item.year}</p>
+                            <p>Color : {item.color}</p>
+                            <p>Pantone Value : {item.pantone_value}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </>
 
     );
@@ -164,4 +152,8 @@ export default Redux;
 
 #### 6. 실행 화면
 
-아래 테이블은 React-Bootstrap의 Table Component를 사용하여 리덕스에 저장된 데이터를 표시했습니다.
+아래 화면에서 리덕스에 저장된 데이터를 노출했으며 리덕스 개발자도구 창에서도 확인 가능합니다.
+
+[구글 웹 스토어 Redux DevTools 확장 프로그램 바로가기](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
+

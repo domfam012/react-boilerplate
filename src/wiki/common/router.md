@@ -39,7 +39,7 @@ path와 element를 포함하고 있는 라우터 리스트를 생성한다.
 
 ```javascript
 import Home from "../pages/Home"
-import Bootstrap from "../pages/Bootstrap";
+import AntDesign from "../pages/AntDesign";
 import I18next from "../pages/I18next";
 import RouterV6 from "../pages/RouterV6"
 import Api from "../pages/Api"
@@ -55,8 +55,8 @@ const RouteList = [
         element :  <I18next/>
     },
     {
-        path : 'bootstrap',
-        element :  <Bootstrap/>
+        path : '/antDesign',
+        element :  <AntDesign/>
     },
     {
         path : '/router/:id',
@@ -174,6 +174,10 @@ function RouterV6 () {
                 <button onClick={() => {navigate("/");}}>
                     Home
                 </button>
+                {/*다음 페이지 이동, +1*/}
+                <button onClick={() => navigate(`/router/${parseInt(id) + 1}`)}>
+                    Next Router Page
+                </button>
                 {/*이전 화면 이동, -1 */}
                 <button onClick={() => {navigate(-1);}}>
                     Go Back
@@ -181,10 +185,6 @@ function RouterV6 () {
                 {/*이전 화면 이동, -2 */}
                 <button onClick={() => {navigate(-2);}}>
                     Go Back Twice
-                </button>
-                {/*다음 페이지 이동, +1*/}
-                <button onClick={() => navigate(`/router/${parseInt(id) + 1}`)}>
-                    Next Router Page
                 </button>
             </div>
         </>

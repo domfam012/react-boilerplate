@@ -3,7 +3,7 @@ import i18next from "../lang/i18n";
 import {useEffect, useState} from "react";
 import source from "../wiki/common/i18next.md";
 import Markdown from "../components/markdown/MarkdownRenderer";
-import Dropdown from 'react-bootstrap/Dropdown';
+import {Dropdown} from "antd"
 
 function I18next() {
     const {t, i18n} = useTranslation();
@@ -20,18 +20,36 @@ function I18next() {
             .then(result => setPost(result));
     },[]);
 
+    const items = [
+        {
+            label: 'KO',
+            key: 'ko',
+        },
+        {
+            label: 'EN',
+            key: 'en',
+        }
+    ];
+
+    const onClick = ({ key }) => {
+        clickHandler(key);
+    };
+
     return (
         <>
             <Markdown linkTarget="_blank">{post}</Markdown>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                   current language : {`${i18n.language.toUpperCase()} `}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <Dropdown.Item onClick={()=>clickHandler("ko")}>KO</Dropdown.Item>
-                    <Dropdown.Item onClick={()=>clickHandler("en")}>EN</Dropdown.Item>
-                </Dropdown.Menu>
+            <Dropdown
+                menu={{
+                    items,
+                    onClick
+                }}
+                placement="top"
+            >
+                <a style={{borderRadius : 6, backgroundColor : '#1677ff', color : '#fff', width : 230, fontSize : 18, textAlign : 'center', padding : 10}} onClick={(e) => e.preventDefault()}>
+                    current language : {`${i18n.language.toUpperCase()} `}
+                </a>
             </Dropdown>
+            <br/>
             <br/>
             <div>
                 <p>{t("hello")}</p>

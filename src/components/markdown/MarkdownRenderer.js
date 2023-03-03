@@ -36,7 +36,7 @@ const BlockQuote = (children) => {
 
 const H4Style = styled.h4`
   padding-bottom: 10px;
-  font-size: 17px;
+  font-size: 20px;
 `
 const H4 = (children) => {
     return(
@@ -46,11 +46,25 @@ const H4 = (children) => {
     )
 }
 
+const H1Style = styled.h1`
+  margin-top: 10px;
+  font-size: 32px;
+`
+const H1 = (children) => {
+    return(
+        <H1Style>
+            {children.children}
+        </H1Style>
+    )
+}
+
+
 const Markdown = React.memo(({ ...props }) => {
     const renderers = {
         code : CodeBlock,
         blockquote : BlockQuote,
-        h4 : H4
+        h4 : H4,
+        h1 : H1
     };
     return<MarkDownStyle><ReactMarkdown {...props} remarkPlugins={[remarkGfm]} components={renderers} /></MarkDownStyle>;
 });
