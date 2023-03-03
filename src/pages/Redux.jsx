@@ -1,13 +1,10 @@
-import React, {useEffect, useState} from "react";
-import source from "../wiki/common/redux.md";
-import Markdown from "../components/markdown/MarkdownRenderer";
+import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {selectList, setList} from "../app/slice";
 import {exampleApi} from "../api/adaptor.api";
 
 function Redux() {
     const dispatch = useDispatch()
-    const [post, setPost] = useState("");
     const list = useSelector(selectList);
 
     useEffect(()=>{
@@ -16,15 +13,11 @@ function Redux() {
         })
     },[dispatch]);
 
-    useEffect(()=>{
-        fetch(source)
-            .then(response => response.text())
-            .then(result => setPost(result));
-    },[])
-
     return (
         <>
-            <Markdown linkTarget="_blank">{post}</Markdown>
+            <div style={{marginBottom : 50}}>
+                <h1>Redux</h1>
+            </div>
             <div style={{display : "flex"}}>
                 {
                     list?.map((item, index) =>(

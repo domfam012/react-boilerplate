@@ -1,25 +1,18 @@
 import React, {useEffect, useState} from "react";
-import source from "../wiki/common/api.md";
-import Markdown from "../components/markdown/MarkdownRenderer";
 import {exampleApi} from "../api/adaptor.api";
 
 function Api() {
-    const [post, setPost] = useState("")
     const [apiData, setApiData] = useState([]);
 
     useEffect(()=>{
         exampleApi({}, (err, res) => setApiData(res))
     },[]);
 
-    useEffect(()=>{
-        fetch(source)
-            .then(response => response.text())
-            .then(result => setPost(result));
-    },[])
-
     return (
         <>
-            <Markdown>{post}</Markdown>
+            <div style={{marginBottom : 50}}>
+                <h1>API</h1>
+            </div>
             <div style={{display : "flex"}}>
                 {
                     apiData?.map((item, index) =>(

@@ -1,16 +1,16 @@
-name: main
+name: wiki
 
 on:
   push:
     branches:
-      - main    # main 브랜치에서 push 이벤트가 일어났을 때 실행
+      - wiki    # main 브랜치에서 push 이벤트가 일어났을 때 실행
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-        uses: actions/checkout@main
+        uses: actions/checkout@wiki
 
       - name: Cache node modules  # node modules 캐싱
         uses: actions/cache@v1

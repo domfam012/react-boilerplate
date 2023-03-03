@@ -7,7 +7,6 @@ import { Layout} from 'antd';
 import {Route, Routes} from "react-router-dom";
 import RouteList from "./app/router";
 
-
 const {Content} = Layout;
 
 const App = () => {
@@ -17,7 +16,7 @@ const App = () => {
                 <SiderC/>
                 <Layout className="site-layout">
                     <HeaderC/>
-                    <Content style={{margin: '16px 16px',}}>
+                    <Content style={{margin: '16px 16px'}}>
                         <div className="site-layout-background" style={{padding: 24, minHeight: 360,}}>
                             <Routes>
                                 {

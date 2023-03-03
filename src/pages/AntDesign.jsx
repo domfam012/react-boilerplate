@@ -1,7 +1,5 @@
-import {useEffect, useState} from "react";
-import source from "../wiki/common/antDesign.md";
-import Markdown from "../components/markdown/MarkdownRenderer";
 import { Carousel } from 'antd';
+import React from "react";
 
 const contentStyle = {
     height: '160px',
@@ -12,17 +10,11 @@ const contentStyle = {
 };
 
 function AntDesign() {
-    const [post, setPost] = useState("")
-
-    useEffect(()=>{
-        fetch(source)
-            .then(response => response.text())
-            .then(result => setPost(result));
-    },[]);
-
     return (
         <>
-            <Markdown linkTarget="_blank">{post}</Markdown>
+            <div style={{marginBottom : 50}}>
+                <h1>AntDesign</h1>
+            </div>
             <Carousel autoplay>
                 <div>
                     <h3 style={contentStyle}>1</h3>

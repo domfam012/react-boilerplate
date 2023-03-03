@@ -1,24 +1,16 @@
-import {useEffect, useState} from "react";
 import {useNavigate, useParams } from "react-router";
-import source from "../wiki/common/router.md";
-import Markdown from "../components/markdown/MarkdownRenderer";
 import {Link} from "react-router-dom";
 import { Button } from 'antd';
 
 function RouterV6 () {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [post, setPost] = useState("")
-
-    useEffect(()=>{
-        fetch(source)
-            .then(response => response.text())
-            .then(result => setPost(result));
-    },[])
 
     return (
         <>
-            <Markdown linkTarget="_blank">{post}</Markdown>
+            <div style={{marginBottom : 50}}>
+                <h1>RouterV6</h1>
+            </div>
             <div>현재 페이지 URL 파라미터 : router/{id}</div>
             <br/>
             <div> Link 사용 예제 </div>
