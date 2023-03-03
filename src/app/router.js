@@ -1,5 +1,5 @@
 import Home from "../pages/Home"
-import Bootstrap from "../pages/Bootstrap";
+import AntDesign from "../pages/AntDesign";
 import I18next from "../pages/I18next";
 import RouterV6 from "../pages/RouterV6"
 import Api from "../pages/Api"
@@ -15,8 +15,8 @@ const RouteList = [
         element :  <I18next/>
     },
     {
-        path : 'bootstrap',
-        element :  <Bootstrap/>
+        path : '/antDesign',
+        element :  <AntDesign/>
     },
     {
         path : '/router/:id',

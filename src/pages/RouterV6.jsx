@@ -3,7 +3,7 @@ import {useNavigate, useParams } from "react-router";
 import source from "../wiki/common/router.md";
 import Markdown from "../components/markdown/MarkdownRenderer";
 import {Link} from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import { Button } from 'antd';
 
 function RouterV6 () {
     const { id } = useParams();
@@ -32,10 +32,10 @@ function RouterV6 () {
             </ul>
             <div style={{paddingBottom : "10px"}}>useNavigate 및 useParams 사용 예제 :</div>
             <div>
-                <Button onClick={() => {navigate("/");}} variant="primary">Home</Button>{' '}
-                <Button onClick={() => navigate(`/router/${parseInt(id) + 1}`)} variant="success">Next Router Page</Button>{' '}
-                <Button onClick={() => {navigate(-1);}} variant="warning">Go Back</Button>{' '}
-                <Button onClick={() => {navigate(-2);}} variant="danger">Go Back Twice</Button>{' '}
+                <Button onClick={() => {navigate("/");}} type="primary">Home</Button>{' '}
+                <Button onClick={() => navigate(`/router/${parseInt(id) + 1}`)} type="primary">Next Router Page</Button>{' '}
+                <Button onClick={() => {navigate(-1);}} type="primary">Go Back</Button>{' '}
+                <Button onClick={() => {navigate(-2);}} type="primary">Go Back Twice</Button>{' '}
             </div>
         </>
 

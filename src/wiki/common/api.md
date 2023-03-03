@@ -91,7 +91,6 @@ export const exampleApi = (params, callback) => {
 
 ```javascript
 import React, {useEffect, useState} from "react";
-import Table from 'react-bootstrap/Table';
 import {exampleApi} from "../api/adaptor.api"; // API 연동 모듈 사용 방법 2에서 생성한 함수 import
 
 function Api() {
@@ -104,30 +103,19 @@ function Api() {
     return (
         <>
             {/*API 응답 데이터를 보여주기 위한 로직*/}
-            <Table striped bordered hover> 
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Year</th>
-                        <th>Color</th>
-                        <th>PantoneValue</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        apiData?.map((item, index) =>(
-                            <tr key={index}>
-                                <td>{item.id}</td>
-                                <td>{item.name}</td>
-                                <td>{item.year}</td>
-                                <td>{item.color}</td>
-                                <td>{item.pantone_value}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </Table>
+            <div style={{display : "flex"}}>
+                {
+                    apiData?.map((item, index) =>(
+                        <div style={{fontSize : 10, marginRight : 20}} key={index}>
+                            <p>ID : {item.id}</p>
+                            <p>Name : {item.name}</p>
+                            <p>Year : {item.year}</p>
+                            <p>Color : {item.color}</p>
+                            <p>Pantone Value : {item.pantone_value}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </>
     );
 }
@@ -138,7 +126,7 @@ export default Api;
 
 #### 6. 실행 화면
 
-아래 테이블은 React-Bootstrap의 Table Component를 사용하여 응답 데이터를 표시했으며 콘솔 창에서도 응답 데이터 확인 가능합니다.
+아래 화면에서 응답 데이터를 노출했으며 콘솔 창에서도 확인 가능합니다.
 
 > ※ 콘솔 창 확인 시 API 응답 데이터가 두 번 찍히는 현상   
 >

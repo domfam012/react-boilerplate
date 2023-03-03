@@ -65,7 +65,7 @@ package-lock.json : 프로그래머가 관리할 필요가 없고 npm이나 yarn
 │    │   └── i18n.js
 │    ├── pages // 화면 단위의 라우팅 컴포넌트 모음
 │    │   ├── Api.jsx
-│    │   ├── Bootstrap.jsx
+│    │   ├── AntDesign.jsx
 │    │   ├── Home.jsx
 │    │   ├── I18next.jsx
 │    │   ├── Redux.jsx
@@ -77,7 +77,7 @@ package-lock.json : 프로그래머가 관리할 필요가 없고 npm이나 yarn
 │    │   │   └── ssr_csr.md
 │    │   ├── common
 │    │   │   ├── api.md
-│    │   │   ├── bootstrap.md
+│    │   │   ├── antDesign.md
 │    │   │   ├── home.md
 │    │   │   ├── i18next.md
 │    │   │   ├── redux.md
@@ -148,8 +148,6 @@ export default Home;
 - redux-toolkit : 1.8.3
 - react-router : 6.3.0
 - axios : 0.27.2
-- bootstrap : 5.2.0
-- react-bootstrap : 2.5.0
 - react-i18next : 11.18.3
 - react-markdown : 8.0.3
 - react-router-dom : 6.3.0

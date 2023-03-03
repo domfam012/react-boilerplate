@@ -2,7 +2,6 @@ import React from 'react';
 import SiderC from "./components/Sider";
 import FooterC from "./components/Footer";
 import HeaderC from "./components/Header";
-import 'antd/dist/antd.css';
 import './index.css';
 import { Layout} from 'antd';
 import {Route, Routes} from "react-router-dom";
