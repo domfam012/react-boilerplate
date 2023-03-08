@@ -6,7 +6,7 @@ const api = new Api();
 
 export const exampleApi = (params, callback) => {
     return api.exampleApi(params).then(data => {
-        // store.dispatch(setList(data.data)) // 바로 redux 저장 필요시에만 작성
-        callback("", data.data); //화면단으로 데이터 전송 필요시에만 작성
+        store.dispatch(setList(data.data)) // 바로 redux 저장 필요시에만 작성
+        // callback("", data.data); //화면단으로 데이터 전송 필요시에만 작성
     })
 };

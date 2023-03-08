@@ -1,12 +1,9 @@
 import React from 'react';
-import {Layout} from "antd";
 
-const { Header } = Layout;
-
-function HeaderC(props) {
+function Header(props) {
     return (
-        <></>
+        <div/>
     );
 }
 
-export default HeaderC;
+export default Header;
